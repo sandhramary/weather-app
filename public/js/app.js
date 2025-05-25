@@ -13,7 +13,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
   if (!val) {
     errorPara.innerHTML = "Provide a valid location!";
   } else {
-    fetch(`http://localhost:3000/weather?address=${val}`).then((response) => {
+    fetch(`/weather?address=${val}`).then((response) => {
       response.json().then((res) => {
         if (res.error) {
           errorPara.innerHTML = "Provide a valid location!";
